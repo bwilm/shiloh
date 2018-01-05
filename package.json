@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:ts": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:ts && npm run server",
+    "server": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,11 @@
   "homepage": "https://github.com/bwilm/shiloh#readme",
   "dependencies": {
     "@types/express": "^4.11.0",
+    "@types/express-session": "^1.15.6",
+    "angular": "^1.6.8",
+    "config": "^1.29.0",
     "express": "^4.16.2",
+    "tsconfig": "^7.0.0",
     "typescript": "^2.6.2"
   }
 }
